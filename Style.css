@@ -1,0 +1,67 @@
+.fares {
+
+  -webkit-animation: wiggle 0.2s ease-in-out infinite;
+
+  -moz-animation: wiggle 0.2s ease-in-out infinite;
+
+  -o-animation: wiggle 0.2s ease-in-out infinite;
+
+  animation: wiggle 0.2s ease-in-out infinite;
+
+}
+
+@-webkit-keyframes wiggle {
+
+  0% { -webkit-transform: rotate(0deg); }
+
+  25% { -webkit-transform: rotate(-5deg); }
+
+  50% { -webkit-transform: rotate(0deg); }
+
+  75% { -webkit-transform: rotate(5deg); }
+
+  100% { -webkit-transform: rotate(0deg); }
+
+}
+
+@-moz-keyframes wiggle {
+
+  0% { -moz-transform: rotate(0deg); }
+
+  25% { -moz-transform: rotate(-5deg); }
+
+  50% { -moz-transform: rotate(0deg); }
+
+  75% { -moz-transform: rotate(5deg); }
+
+  100% { -moz-transform: rotate(0deg); }
+
+}
+
+@-o-keyframes wiggle {
+
+  0% { -o-transform: rotate(0deg); }
+
+  25% { -o-transform: rotate(-5deg); }
+
+  50% { -o-transform: rotate(0deg); }
+
+  75% { -o-transform: rotate(5deg); }
+
+  100% { -o-transform: rotate(0deg); }
+
+}
+
+@keyframes wiggle {
+
+  0% { transform: rotate(0deg); }
+
+  25% { transform: rotate(-5deg); }
+
+  50% { transform: rotate(0deg); }
+
+  75% { transform: rotate(5deg); }
+
+  100% { transform: rotate(0deg); }
+
+}
