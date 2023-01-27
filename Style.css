@@ -1,0 +1,59 @@
+.fares {
+
+  position: relative;
+
+  animation: orbit 5s linear infinite;
+
+}
+
+.dot {
+
+  position: absolute;
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background-color: black;
+
+  animation: dot-animation 5s linear infinite;
+
+}
+
+@keyframes orbit {
+
+  0% {
+
+    transform: rotate(0deg);
+
+  }
+
+  100% {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+@keyframes dot-animation {
+
+  0% {
+
+    transform: rotate(0deg);
+
+    opacity: 1;
+
+  }
+
+  20% {
+
+    transform: rotate(360deg);
+
+    opacity: 0;
+
+  }
+
+}
