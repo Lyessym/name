@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html class="loading">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">    
+    <title>Star</title></title>
+    <link rel="stylesheet" type="text/css" href="move.css">
+    <link rel="apple-touch-icon" href="theme-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="theme-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/app-lite.css">
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/core/colors/palette-gradient.css">
+ <link rel="icon" type="image/x-icon" href="https://www.bib.com/hs-fs/hubfs/BIB-torch-1c-w-01-2.png?width=1629&height=733&name=BIB-torch-1c-w-01-2.png" rel="stylesheet" >
+    	 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  </head>
+  <body class="vertical-layout" style="background-color:#112132;" data-color="bg-gradient-x-purple-blue">   
+  <style>
+		h5,h4{
+			color:white;
+		}
+		.text-center{
+			background-color:#0e1d2c;
+			border:1px solid #525252;
+			border-radius:5px;
+		}
+		textarea{
+			color:white;
+			resize: none;
+		}
+
+		.text-center::placeholder{
+			color:grey;
+		}
+		.text-center:focus{
+			background-color:#0e1d2c;
+		}
+
+		textarea::-webkit-scrollbar {
+  			width: 5px;
+ 			background-color: #112132; 
+		}
+
+		textarea::-webkit-scrollbar-thumb {
+ 			border-radius: 10px;
+  			background-color: #2e4964; 
+		}
+		.lista_reprovadass{
+			color:#747474;
+		}
+		.card-body{
+			background-color: #1c3044; 
+			border-radius:5px;
+		}
+		.text-center{
+			border:none;
+		}
+		.badge-success,.btn-success{
+			background-color: #ffe74c;
+			color:black	;
+			border:none;
+		}
+		.btn-success:hover{
+			background-color: #c9b63c;
+			border:none;
+			color:black;
+			shadow:hidden;
+		}
+		.aprovadas{
+			background-color: #35a7ff;
+			color:black	;
+		}
+		.badge-danger{
+			background-color: #ff5964;
+			color:black	;
+		}
+		.html body .content .content-wrapper{
+			background-color:#112132;
+		}
+
+		.btn-bg-gradient {
+  			background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+   			 margin: 5px;
+			 width:49%;
+    		padding: 12px 40px;
+    		text-align: center;
+    		text-transform: uppercase;
+    		transition: 0.5s;
+    		background-size: 200% auto;
+    		color: white;            
+    		box-shadow: 0 0 20px #eee;
+    		border-radius: 5px;
+    		display: block;
+			-webkit-box-shadow: 0 0 0 0 #514a9d;
+  		}
+
+  		.btn-bg-gradient:hover {
+   			background-position: right center; /* change the direction of the change here */
+    		color: #fff;
+    		text-decoration: none;
+  		}
+
+		  .btn-bg-gradient-x {
+			background-image: linear-gradient(to right, #ee0979 0%, #ff6a00  51%, #ee0979  100%);
+            margin: 5px;
+            padding: 12px 45px;
+			
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 5px;
+            display: block;
+			-webkit-box-shadow: 0 0 0 0 #514a9d;
+  		}
+
+  		.btn-bg-gradient-x:hover {
+			background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+  		}
+
+		  .statusbar{
+			height:320px;
+			padding-top:50px;
+		  }
+		  .hr-statusbar{
+			border:none;
+			height:1px;
+			background-color:#3c5c7c;
+		  }
+	</style> <div class="app-content content">
+	    
+      <div class="content-wrapper">
+        <div class="content-wrapper-before mb-300">        	
+        </div>        
+  <div class="content-body">
+  	<div class="mt-2"></div>
+	<div class="row">
+		<div class="col-md-8">
+			<div class="card">
+				<div class="card-body text-center">
+					<h4 class="mb-2"><strong>✘ F a r e s. ✘</strong></h4>
+					<textarea rows="14" class="form-control text-center form-checker mb-2" placeholder="ʏᴏᴜ ᴋɴᴏᴡ ᴡʜᴀᴛ ᴛᴏ ᴅᴏ ʀɪɢʜᴛ?"></textarea>	
+					
+					          <select name="gate" id="gate" class="form-control" style="margin-top: 0px;">
+					          <option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:black" value="wine/nogate.php">ᴠɪᴇᴡ ɢᴀᴛᴇs</option>
+
+				<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/usd0.5.php">sᴛʀɪᴘ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴠᴠ: $0.5</option>	
+				<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/cvv0.8usd.php">sᴛʀɪᴘᴇ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴠᴠ: $0.8</option>                       
+				<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/usd1.php">sᴛʀɪᴘᴇ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴠᴠ: $1</option>
+				<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/cvv2usd.php">sᴛʀɪᴘᴇ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴠᴠ: $2</option>  
+                                <option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/usd1CCN.php">sᴛʀɪᴘᴇ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴄɴ: $1</option>	              
+       
+				<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/usd5CCN.php">sᴛʀɪᴘᴇ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴄɴ: $5</option>
+                                <option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/usd10CCN.php">sᴛʀɪᴘᴇ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴄɴ: $10</option>	              
+				<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/usd5CVV.php">sᴛʀɪᴘᴇ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴠᴠ: $5</option>
+                                <option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="wine/usd10CVV.php">sᴛʀɪᴘᴇ ᴄʜᴀʀᴀɢᴇᴅ  ᴄᴠᴠ: $10</option>
+                                
+  <option style="background:rgba(16, 15, 154, 0.281);color:rgb(255, 208, 0);color:white" value="gate/sk.php">ꜱᴋ ᴍᴀꜱꜱ ᴄʜᴇᴄᴋᴇʀ </option>              
+                </select>
+
+               <br>
+		<button class="btn btn-play btn-glow btn-yellow" style="width: 49%; float: left;"><i class="fa fa-play"></i>START</button>
+					<button class="btn btn-stop btn-glow btn-red" style="width: 49%; float: right;" disabled><i class="fa fa-stop"></i>STOP</button>
+				
+					</div>
+			</div>
+		</div>
+<div class="col-md-4">
+  <div class="card mb-2">
+  	<div class="card-body border-teal">
+      <hr>	
+<h5 class="text-primary"‎>ᴛᴏᴛᴀʟ :<span class="badge badge-glow badge-primary carregadas float-right">0</span></h5>
+<hr>
+<h5 class="text-success">ᴄʜᴀʀɢᴇᴅ  :<span class="badge badge-glow badge-success charge float-right">0</span></h5>
+<hr>
+<h5 class="text-success"‎>ᴄᴠᴠ :<span class="badge badge-glow badge-success cvvs float-right">0</span></h5>
+<hr>
+<h5 class="text-success">ᴄᴄɴ :<span class="aprovadas badge badge-glow badge-success float-right">0</span></h5>
+<hr>
+<h5 class="text-danger">ᴅᴇᴀᴅ ʟɪᴍɪᴛ10ᴋ  :<span class="badge badge-danger badge-glow float-right reprovadas">0</span></h5>
+<hr>
+<div>
+</div>
+</div>
+
+</div>
+<div text-align: "center" class="card-body border-teal">
+<div  class="card mb-2 hidden-mobile">
+</div>
+
+<center>
+</h6>
+<body>
+    <p>✘ ᴄʜᴇᴄᴋᴇʀ ᴠɪsɪᴛᴇᴅ ✘</p>
+    <h1 id="count">0</h1>
+    <p>ᴛɪᴍᴇs</p>
+
+    <script>
+      const countEl = document.getElementById("count");
+      countvisits();
+
+      function countvisits() {
+        fetch('https://api.countapi.xyz/update/xenpaicc/world/?amount=1')
+          .then((res) => res.json())
+          .then((res) => {
+            countEl.innerHTML = res.value;
+          });
+      }
+    </script>
+  </body>
+<center><p> <b><div class=text-danger> ᴄʀᴀғᴛᴇᴅ ʙʏ <a href="https://t.me/F_C_1_6">Fares</b></a></div></p><center>
+			<center><h5><span class="badge badge-primary">sᴛᴀᴛᴜs :</span> <span class="badge badge-success">ᴏɴʟɪɴᴇ</span></h5></center>
+
+
+                                <h4><span class="badge badge-primary btn-bg-gradient-x-blue-cyan btn-primary"><a href="https://namso-gen.com/" target="_blank">𝐍𝐀𝐌𝐒𝐎 𝐆𝐄𝐍</a></span>
+                                <h4><span class="badge badge-primary btn-bg-gradient-x-blue-cyan btn-primary"><a href="https://t.me/F_C_1_6" target="_blank">𝐂𝐎𝐍𝐓𝐀𝐂𝐓</a></span>
+								<br>
+								<br>
+								<center>
+				</div>	
+                    </div>	
+					</div>	
+                    </div>	
+
+
+        <div class="col-xl-12">
+			<div class="card">
+			<div class="border-yellow">
+				<div class="card-body">
+					<div class="float-right">
+						<button type="show" class="btn btn-primary btn-sm show-charge"><i class="fa fa-eye-slash"></i></button>
+					<button class="btn btn-success btn-sm btn-copy1"><i class="fa fa-copy"></i></button>					
+					</div>
+					<h4 class="card-title mb-1"><i class="fa fa-check-circle text-success"></i> 𝐂𝐇𝐀𝐑𝐆𝐄𝐃</h4>					
+			<div id='lista_charge'></div>
+				</div>				
+			</div>
+			</div>
+		</div>
+
+
+		<div class="col-xl-12">
+			<div class="card">
+			<div class="border-black">
+				<div class="card-body">
+					<div class="float-right">
+						<button type="show" class="btn btn-primary btn-sm show-live"><i class="fa fa-eye-slash"></i></button>
+					<button class="btn btn-success btn-sm btn-copy2"><i class="fa fa-copy"></i></button>					
+					</div>
+					<h4 class="card-title mb-1"><i class="fa fa-check text-success"></i> 𝗖𝗩𝗩</h4>					
+			<div id='lista_cvvs'></div>
+				</div>				
+			</div>
+			</div>
+
+		</div>
+
+
+		<div class="col-xl-12">
+			<div class="card">
+			<div class="border-black">
+				<div class="card-body">
+					<div class="float-right">
+						<button type="show" class="btn btn-primary btn-sm show-lives"><i class="fa fa-eye-slash"></i></button>
+					<button class="btn btn-success btn-sm btn-copy"><i class="fa fa-copy"></i></button>					
+					</div>
+					<h4 class="card-title mb-1"><i class="fa fa-times text-success"></i> 𝗖𝗖𝗡</h4>					
+			<div id='lista_aprovadas'></div>
+				</div>				
+			</div>
+			</div>
+
+		</div>
+
+
+		<div class="col-xl-12">
+			<div class="card">
+			<div class="border-red">
+				<div class="card-body">
+					<div class="float-right">
+						<button type='hidden' class="btn btn-primary btn-sm show-dies"><i class="fa fa-eye"></i></button>
+					<button class="btn btn-danger btn-sm btn-trash"><i class="fa fa-trash"></i></button>					
+					</div>
+					
+					<h4 class="card-title mb-1"><i class="fa fa-times text-danger"></i> 𝗗𝗘𝗖𝗟𝗜𝗡𝗘𝗗</h4>
+						<div style='display: none;' id='lista_reprovadas'></div>
+				</div>				
+			</div>
+		</div>
+  		
+</section>
+<script src="theme-assets/js/core/libraries/jquery.min.js" type="text/javascript"></script>
+    
+	
+<style>
+    footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #0f141a;
+  color: #0f141a;
+}
+
+body {
+	 background-color: #0f141a;
+   }
+   .form-checker {
+	 background-color: #0f141a;
+	 color: #ffffff;
+   }
+   .form-checker:focus {
+	 background-color: #0f141a;
+	 color: #ffffff;
+   }
+   .form-control {
+	 background-color: #0f141a;
+	 color: #ffffff;
+   }
+   .form-control:focus {
+	 background-color: #0f141a;
+	 color: #ffffff;
+   }
+   .form-control::-webkit-input-placeholder {
+	 color: #ffffff;
+   }
+   .form-control::-moz-placeholder {
+	 color: #ffffff;
+   }
+   .card-body{
+	   background-color: #161d24;
+	   color: #ffffff;
+   }
+
+	   </style>
+
+<script src="theme-assets/js/core/libraries/jquery.min.js" type="text/javascript"></script>
+    
+	
+<style>
+    footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #0f141a;
+  color: #0f141a;
+}
+
+body {
+	 background-color: #0f141a;
+   }
+   .form-checker {
+	 background-color: #0f141a;
+	 color: #ffffff;
+   }
+   .form-checker:focus {
+	 background-color: #0f141a;
+	 color: #ffffff;
+   }
+   .form-control {
+	 background-color: #0f141a;
+	 color: #ffffff;
+   }
+   .form-control:focus {
+	 background-color: #0f141a;
+	 color: #ffffff;
+   }
+   .form-control::-webkit-input-placeholder {
+	 color: #ffffff;
+   }
+   .form-control::-moz-placeholder {
+	 color: #ffffff;
+   }
+   .card-body{
+	   background-color: #161d24;
+	   color: #ffffff;
+   }
+.text
+{
+
+width:200px;
+height:200px;
+color:#222;
+text-align: center;
+
+margin: auto;
+line-height:200px;
+
+}
+
+p
+{
+font-size:20px;
+animation:shadow 5s ease-in-out infinite
+}
+
+@keyframes shadow
+{
+0% {text-shadow:5px 2px 3px #f50;}
+50% {text-shadow:5px 2px 3px #f50;}
+100% {text-shadow:5px 2px 3px #f50;}
+	   </style>
+
+<script>
+document.body.style.backgroundColor = 'rgba(15, 20, 26, 1)';
+const element = document.querySelector('.fer');
+const element1 = document.querySelector('.upa');
+
+const changeColor = () => {
+ element.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+ element1.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+};
+
+setInterval(changeColor, 1000);
+.fares {
+  animation: wiggle 0.2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+You can use this class on the element 
+
+const text = 'Fares';
+let index = 0;
+let isErasing = false;
+const type = () => {
+  if (index >= text.length) {
+    isErasing = true;
+  }
+  if (index <= 1) {
+    isErasing = false;
+  }
+  if (isErasing) {
+    element.textContent = element.textContent.substring(0, element.textContent.length - 1);
+    index--;
+  } else {
+    element.textContent += text.charAt(index);
+    index++;
+  }
+};
+setInterval(type, 100);
+
+let colors = ['red', 'green', 'blue'];
+let textarea = document.querySelector('textarea');
+
+setInterval(function() {
+  let color = colors[Math.floor(Math.random() * colors.length)];
+  textarea.style.outlineColor = color;
+}, 1000);
+
+$(document).ready(function(){
+
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-dark',
+	cancelButton: 'btn btn-success',
+  },
+  buttonsStyling: false
+})
+	  
+    })
+    setTimeout(RedirectUrl, 3000);
+  } else if (
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+
+  }
+})
+    }
+  customClass: {
+    confirmButton: 'btn btn-dark',
+	cancelButton: 'btn btn-success',
+  },
+  buttonsStyling: false
+})
+
+</style>
+</head>
+<body>
+
+<footer>
+
+
+<center><p> <b><div class=text-danger> ᴄʀᴀғᴛᴇᴅ ʙʏ <a href="https://t.me/F_C_1_6">Fares</b></a></div></p><center>
+			<center><h5><span class="badge badge-light">sᴛᴀᴛᴜs :</span> <span class="badge badge-success">ᴏɴʟɪɴᴇ</span></h5></center>
+
+
+
+</footer>
+</body>
+</html>
+
+
+</section>
+        </div>
+      </div>
+    </div>
+ 
+    <script src="theme-assets/js/core/libraries/jquery.min.js" type="text/javascript"></script>
+
+<script>
+
+$(document).ready(function(){
+
+
+
+$('.show-charge').click(function(){
+var type = $('.show-charge').attr('type');
+$('#lista_charge').slideToggle();
+if(type == 'show'){
+$('.show-charge').html('<i class="fa fa-eye"></i>');
+$('.show-charge').attr('type', 'hidden');
+}else{
+$('.show-charge').html('<i class="fa fa-eye-slash"></i>');
+$('.show-charge').attr('type', 'show');
+}});
+
+$('.show-live').click(function(){
+var type = $('.show-live').attr('type');
+$('#lista_cvvs').slideToggle();
+if(type == 'show'){
+$('.show-live').html('<i class="fa fa-eye"></i>');
+$('.show-live').attr('type', 'hidden');
+}else{
+$('.show-live').html('<i class="fa fa-eye-slash"></i>');
+$('.show-live').attr('type', 'show');
+}});
+
+$('.show-lives').click(function(){
+var type = $('.show-lives').attr('type');
+$('#lista_aprovadas').slideToggle();
+if(type == 'show'){
+$('.show-lives').html('<i class="fa fa-eye"></i>');
+$('.show-lives').attr('type', 'hidden');
+}else{
+$('.show-lives').html('<i class="fa fa-eye-slash"></i>');
+$('.show-lives').attr('type', 'show');
+}});
+
+$('.show-dies').click(function(){
+var type = $('.show-dies').attr('type');
+$('#lista_reprovadas').slideToggle();
+if(type == 'show'){
+$('.show-dies').html('<i class="fa fa-eye"></i>');
+$('.show-dies').attr('type', 'hidden');
+}else{
+$('.show-dies').html('<i class="fa fa-eye-slash"></i>');
+$('.show-dies').attr('type', 'show');
+}});
+
+$('.btn-trash').click(function(){
+	Swal.fire({title: 'REMOVED', icon: 'error', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+$('#lista_reprovadas').text('');
+});
+
+$('.btn-copy1').click(function(){
+	Swal.fire({title: 'Copied Charged.', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+var lista_charge = document.getElementById('lista_charge').innerText;
+var textarea = document.createElement("textarea");
+textarea.value = lista_charge;
+document.body.appendChild(textarea); 
+textarea.select(); 
+document.execCommand('copy');           document.body.removeChild(textarea); 
+});
+
+$('.btn-copy2').click(function(){
+	Swal.fire({title: 'Copied Cvvs', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+var lista_live = document.getElementById('lista_cvvs').innerText;
+var textarea = document.createElement("textarea");
+textarea.value = lista_live;
+document.body.appendChild(textarea); 
+textarea.select(); 
+document.execCommand('copy');           document.body.removeChild(textarea); 
+});
+
+$('.btn-copy').click(function(){
+	Swal.fire({title: 'Copied Ccns', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+var lista_lives = document.getElementById('lista_aprovadas').innerText;
+var textarea = document.createElement("textarea");
+textarea.value = lista_lives;
+document.body.appendChild(textarea); 
+textarea.select(); 
+document.execCommand('copy');           document.body.removeChild(textarea); 
+});
+
+
+$('.btn-play').click(function(){
+var sec = $("#sec").val();
+var e = document.getElementById("gate");
+var gate = e.options[e.selectedIndex].value;
+var lista = $('.form-checker').val().trim();
+var array = lista.split('\n');
+var charge = 0, live = 0, lives = 0, dies = 0, testadas = 0, txt = '';
+
+if(!lista){
+	Swal.fire({title: 'Invalid or Empty Fields', icon: 'error', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+	return false;
+}
+
+
+
+Swal.fire({title: 'Checking...', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+
+var line = array.filter(function(value){
+if(value.trim() !== ""){
+	txt += value.trim() + '\n';
+	return value.trim();
+}
+});
+
+/*
+var line = array.filter(function(value){
+return(value.trim() !== "");
+});
+*/
+
+var total = line.length;
+
+
+/*
+line.forEach(function(value){
+txt += value + '\n';
+});
+*/
+
+$('.form-checker').val(txt.trim());
+// ảo ma hả, đừng lấy code chứ !!
+if(total >10000){
+  Swal.fire({title: 'To maintain server balance check 3000 cards at once', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+  return false;
+}
+
+
+$('.carregadas').text(total);
+$('.btn-play').attr('disabled', true);
+$('.btn-stop').attr('disabled', false);
+
+line.forEach(function(data){
+var callBack = $.ajax({
+	url: gate + '?lista=' + data + '&sec=' + sec,
+	success: function(retorno){
+		if(retorno.indexOf("CHARGED") >= 0){
+			$('#lista_charge').append(retorno);
+			removelinha();
+			charge = charge +1;
+			Swal.fire({title: '+1 LIVE', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});}
+			else if(retorno.indexOf("CVV") >= 0){
+			$('#lista_cvvs').append(retorno);
+			removelinha();
+			live = live +1;
+		    Swal.fire({title: '+1 Cvv', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});}
+			else if(retorno.indexOf("CCN") >= 0){
+			$('#lista_aprovadas').append(retorno);
+			removelinha();
+			lives = lives +1;
+		    Swal.fire({title: '+1 Ccn', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});}
+		    else if(retorno.indexOf("SK_DIE") >= 0){
+Swal.fire({title: 'Your SK is invalid!!!', icon: 'error', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+			$('.btn-play').attr('disabled', false);
+			$('.btn-stop').attr('disabled', true);
+			callBack.abort();
+      	return false;
+		    }else if(retorno.indexOf("SK_INVALID") >= 0){
+Swal.fire({title: 'Sk Invalid!!!', icon: 'error', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+			$('.btn-play').attr('disabled', false);
+			$('.btn-stop').attr('disabled', true);
+			callBack.abort();
+      	return false;
+		    }else{
+			$('#lista_reprovadas').append(retorno);
+			removelinha();
+			dies = dies +1;
+		}
+		testadas = charge + live + lives + dies;
+	    $('.charge').text(charge);
+	    $('.cvvs').text(live);
+		$('.aprovadas').text(lives);
+		$('.reprovadas').text(dies);
+		$('.testadas').text(testadas);
+		
+		if(testadas == total){
+			Swal.fire({title: 'Completed!!!', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+			$('.btn-play').attr('disabled', false);
+			$('.btn-stop').attr('disabled', true);
+		}
+        }
+      });
+      $('.btn-stop').click(function(){
+      Swal.fire({title: 'PAUSED', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 10000});
+      $('.btn-play').attr('disabled', false);
+      $('.btn-stop').attr('disabled', true);      
+      	callBack.abort();
+      	return false;
+      });
+    });
+  });
+});
+
+function removelinha() {
+var lines = $('.form-checker').val().split('\n');
+lines.splice(0, 1);
+$('.form-checker').val(lines.join("\n"));
+}
+
+
+
+	
+</script>
+
+  </body>
+</html>
