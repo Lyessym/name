@@ -1,19 +1,21 @@
-h4.mb-2 strong {
+.mb-2 {
 
-  animation: slide-right-left 2s ease-in-out infinite;
+  animation: moveRightLeft 2s linear infinite;
 
 }
 
-@keyframes slide-right-left {
+@keyframes moveRightLeft {
 
-  0% { transform: translateX(0); }
+  0% {
 
-  25% { transform: translateX(25px); }
+    transform: translateX(0);
 
-  50% { transform: translateX(-25px); }
+  }
 
-  75% { transform: translateX(0); }
+  100% {
 
-  100% { transform: translateX(0); }
+    transform: translateX(10px);
+
+  }
 
 }
